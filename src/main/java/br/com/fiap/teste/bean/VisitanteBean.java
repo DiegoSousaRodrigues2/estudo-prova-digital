@@ -1,5 +1,6 @@
 package br.com.fiap.teste.bean;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
@@ -29,6 +30,12 @@ public class VisitanteBean {
 		String path = UploadService.write(image, "visitantes");
 		visitante.setImagePath(path);
 		
+		char lastChar = visitante.getRg().charAt(visitante.getRg().length() - 1);
+
+        
+		visitante.setDigitoRg(""+lastChar);
+		
+		visitante.setDateCadastro(LocalDate.now());
 		dao.create(visitante);
 		
 		System.out.println(path);

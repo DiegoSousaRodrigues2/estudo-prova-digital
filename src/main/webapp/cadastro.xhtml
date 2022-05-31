@@ -29,6 +29,8 @@
 						<p:datePicker
 						id="dataNasc"
 						value="#{visitanteBean.visitante.dateNasc}"
+						required="true"
+						requiredMessage="O campo data é obrigatório"
 						/>
 					</div>
 					<div class="p-field">
@@ -36,20 +38,30 @@
 						<p:inputMask 
 						id="CPF"
 						value="#{visitanteBean.visitante.cpf}" 
-						mask="999.999.999-99" />
+						mask="999.999.999-99" 
+						required="true"
+						requiredMessage="O campo CPF é obrigatório"
+						/>
 					</div>
 					<div class="p-field">
 						<label for="price">RG</label>
-						<p:inputMask 
+						<p:inputText 
 						id="RG"
-						value="#{visitanteBean.visitante.rg}" 
-						mask="99.999.999-9" />
+						value="#{visitanteBean.visitante.rg}"
+						required="true"
+						requiredMessage="O campo RG é obrigatório"
+						 />
 					</div>
 					 
 					<div class="p-field">
 						<label for="image">Image File: </label>
-						<p:fileUpload value="#{visitanteBean.image}" mode="simple"
-							skinSimple="true" id="image" />
+						<p:fileUpload 
+						value="#{visitanteBean.image}" 
+						mode="simple"
+						skinSimple="true" 
+						id="image"
+						requiredMessage="O campo imagem é obrigatório"
+						 />
 					</div>
 					
 				</div>

@@ -14,8 +14,17 @@ public class Visitante {
 	private LocalDate dateNasc;
 	private String cpf;
 	private String rg;
+	private String digitoRg;
 	private LocalDate dateCadastro;
 	private String imagePath;
+	
+	public String getDigitoRg() {
+		return digitoRg;
+	}
+
+	public void setDigitoRg(String string) {
+		this.digitoRg = string;
+	}
 
 	public Long getId() {
 		return id;
